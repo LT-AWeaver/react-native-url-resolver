@@ -1,5 +1,5 @@
 #import <React/RCTBridgeModule.h>
 
-@interface RNUrlResolver : NSObject <RCTBridgeModule>
+@interface RNUrlResolver : NSObject <RCTBridgeModule, NSURLSessionDelegate>
 
 @end
