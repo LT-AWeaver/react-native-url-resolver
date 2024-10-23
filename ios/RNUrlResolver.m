@@ -15,7 +15,7 @@ RCT_EXPORT_METHOD(resolveUrl:(NSURL *)encodedURL
     if (encodedURL == nil) {
         reject(0, @"Unable to handle user activity: No URL provided", nil);
     } else {
-      NSURLSessionConfiguration *configuration = NSURLSessionConfiguration.defaultSessionConfiguration;
+        NSURLSessionConfiguration *configuration = NSURLSessionConfiguration.defaultSessionConfiguration;
         NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration delegate:self delegateQueue:[NSOperationQueue mainQueue]];
         NSURLSessionDataTask *task = [session dataTaskWithURL:encodedURL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
             if (response == nil || ![response isKindOfClass:[NSHTTPURLResponse class]]) {
